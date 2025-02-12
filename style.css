@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #ffe4e1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden; /* Prevents scrolling due to heart animations */
+  padding: 10px;
+}
+
+.container {
+  position: relative;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 400px;
+  z-index: 1;
+}
+
+img {
+  width: 50%;
+  max-width: 150px;
+  border-radius: 10px;
+}
+
+h1 {
+  margin-top: 10px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+p {
+  font-size: 1rem;
+  color: gray;
+}
+
+.buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 50px; /* Rounded for a cute, pill-like shape */
+  transition: all 0.3s ease;
+  width: 40%;
+  min-width: 100px;
+  position: relative;
+  box-shadow: 0 4px 15px rgba(255, 105, 180, 0.3); /* Soft shadow */
+}
+
+#yesBtn, #noBtn {
+  background: #ff69b4; /* Soft pink for both buttons */
+  color: white;
+  box-shadow: 0 0 20px rgba(255, 105, 180, 0.5); /* Glowing effect */
+}
+
+#yesBtn:hover, #noBtn:hover {
+  background: #ff1493; /* Slightly darker pink on hover */
+  box-shadow: 0 0 25px rgba(255, 105, 180, 0.8); /* Intense glow on hover */
+  transform: scale(1.1); /* Slight scale up on hover */
+}
+
+.hidden {
+  display: none;
+}
+
+.celebration {
+  display: none;
+  text-align: center;
+}
+
+/* Falling Hearts */
+.heart {
+  position: absolute;
+  bottom: 0;
+  font-size: 1.5rem;
+  opacity: 0.8;
+  animation: floatUp 5s linear infinite;
+}
+
+/* Animating Hearts for different screen sizes */
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) scale(0.8);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) scale(1.2);
+    opacity: 0;
+  }
+}
+
+/* 🌟 Mobile Responsiveness 🌟 */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+    max-width: 90%;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  button {
+    width: 80%;
+    min-width: auto;
+  }
+
+  .heart {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 10px;
+    width: 95%;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.85rem;
+  }
+
+  img {
+    width: 40%;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  .heart {
+    font-size: 1rem;
+  }
+}
