@@ -1,6 +1,6 @@
 # 💖 Do You Love Me? - A Fun Playful Web App 💖
 
-![App Screenshot](https://your-image-link-here.com/screenshot.png)
+![App Screenshot](./readmeimg.png)
 
 **Do You Love Me?** is a cute, fun, and playful web application designed to bring a smile to your face! 😍 Whether you're trying to make your crush laugh or just want to have some fun with your friends, this app is perfect for adding a touch of romance and humor to your day. 💌
 
